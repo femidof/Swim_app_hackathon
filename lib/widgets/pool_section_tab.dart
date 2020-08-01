@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-class PoolSectionButton extends StatelessWidget {
+class PoolSectionTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
