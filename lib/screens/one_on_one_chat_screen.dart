@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swim_app_hack/widgets/custom_chatbar.dart';
 
 class OneOnOneChatScreen extends StatefulWidget {
   @override
@@ -10,13 +11,6 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customChatBar(),
-    );
-  }
-
-  AppBar customChatBar() {
-    return AppBar(
-      backgroundColor: Color(0xff039DA9),
-      title: Text("AMY"),
     );
   }
 }
