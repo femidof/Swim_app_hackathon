@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1013729422885",
+    "firebase_url": "https://swimapp-chat.firebaseio.com",
+    "project_id": "swimapp-chat",
+    "storage_bucket": "swimapp-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013729422885:android:6e1b30dc2b489931ce19cc",
+        "android_client_info": {
+          "package_name": "com.example.swim_app_hack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013729422885-q5csgo1u1sds0kpp50va9kk3hepvbifh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWU_bPyyPV7BnQG_gRXDZnnW6ugEoqBSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013729422885-q5csgo1u1sds0kpp50va9kk3hepvbifh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
