@@ -44,23 +44,23 @@ class _MessageInputControllerState extends State<MessageInputController> {
     });
   }
 
-  emojiContainer() {
-    return EmojiPicker(
-      rows: 3,
-      bgColor: Colors.white,
-      columns: 7,
-      indicatorColor: MAIN_COLOR,
-      onEmojiSelected: (emoji, category) {
-        // null;
-        setState(() {
-          isWriting = true;
-        });
-        textFieldController.text = textFieldController.text + emoji.emoji;
-      },
-      recommendKeywords: ["face", "happy", "party", "sad"],
-      numRecommended: 50,
-    );
-  }
+  // emojiContainer() {
+  //   return EmojiPicker(
+  //     rows: 3,
+  //     bgColor: Colors.white,
+  //     columns: 7,
+  //     indicatorColor: MAIN_COLOR,
+  //     onEmojiSelected: (emoji, category) {
+  //       // null;
+  //       setState(() {
+  //         isWriting = true;
+  //       });
+  //       textFieldController.text = textFieldController.text + emoji.emoji;
+  //     },
+  //     recommendKeywords: ["face", "happy", "party", "sad"],
+  //     numRecommended: 50,
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
