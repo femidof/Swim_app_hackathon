@@ -178,7 +178,7 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
                     ),
                     onPressed: () {
                       textFieldController.clear();
-                      firestore.collection('messages').add({
+                      firestore.collection('private_chat').add({
                         'text': messageText,
                         'sender': currentUser.id,
                         'timestamp':
@@ -293,9 +293,7 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
   messagesStream() {
     return StreamBuilder<QuerySnapshot>(
       stream: firestore
-          .collection("private_message")
-          .document(currentUser.id)
-          .collection(_recievinguser.id)
+          .collection("private_chate")
           .orderBy("timestamp", descending: true)
           .snapshots(),
       builder: (context, snapshot) {
