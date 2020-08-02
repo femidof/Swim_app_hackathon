@@ -25,33 +25,12 @@ class _PoolSectionChatState extends State<PoolSectionChat> {
 
       //favorite contacts for the posts sidescrolling
       // and other users below
-      body:  Column(
+      body: Column(
             children: <Widget>[
-              Text("Posts"),
+              // Text("Posts"),
               PoolPosts(),
-              // Container(
-              //   child: ListView.builder(
-              //     //spacing to the left
-              //     padding: EdgeInsets.only(left:10.0),
-              //     itemCount: 5,
-              //     itemBuilder: (BuildContext context, int index) {
-              //       return GestureDetector(
-              //         onTap: () {print("entering a post");},
-              //         child: Container(
-              //           width: 120,
-              //           height: 120,
-              //           color: Colors.lightBlueAccent,
-              //         ),
-              //       );
-              //     },
-              //   ),
-              // ),
-              Container(
-                  // child: ListView.builder(),
-                  ),
-              Container(
-                  // child: ListView.builder(),
-                  ),
+              // Text("Users"),
+              // Text("Chat"),
 
             ],
           // ),
