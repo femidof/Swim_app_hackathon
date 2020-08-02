@@ -16,24 +16,49 @@ class Message{
 
 
 final User currentUser = User(
-  id:0,
+  id: 0,
   name: "Me",
   imageUrl: null,
 );
 
-final User guest1 = User(
-  id:1,
-  name:"guest",
-  imageUrl: null,
+final User greg = User(
+  id: 1,
+  name: "Greg",
+  imageUrl: 'assets/images/profile_icons/greg.jpg',
 );
 
-final User guest2 = User(
-  id:2,
-  name:"guest2",
-  imageUrl: null,
+final User olivia = User(
+  id: 2,
+  name: "Olivia",
+  imageUrl: "assets/images/profile_icons/olivia.jpg",
 );
 
+final User sophia = User(
+  id: 3,
+  name: 'Sophia',
+  imageUrl: 'assets/images/profile_icons/sophia.jpg',
+);
 
-List<User> group = [currentUser, guest1, guest2]; 
+List<User> group = [currentUser, olivia, greg]; 
+
+
+List<Message> section_chats = [
+  Message(sender: greg, time: '5:30pm', text:"LOREM IPSUM SECTION"),
+  Message(sender: olivia, time: '6:30pm', text:"LOREM IPSUM SECTION 2"),
+  Message(sender: currentUser, time: '7:30pm', text:"LOREM IPSUM SECTION 3"),
+  Message(sender: sophia, time: '8:30pm', text:"LOREM IPSUM SECTION 4"),
+];
+
+
+List<Message> group_chats = [
+
+  Message(sender: greg, time: '5:30pm', text:"LOREM IPSUM GROUP"),
+  Message(sender: olivia, time: '6:30pm', text:"LOREM IPSUM GROUP 2"),
+  Message(sender: currentUser, time: '7:30pm', text:"LOREM IPSUM GROUP 3"),
+  Message(sender: sophia, time: '8:30pm', text:"LOREM IPSUM GROUP 4"),
+
+
+];
+
 
 // List<Message> chat = [];

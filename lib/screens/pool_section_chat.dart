@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:swim_app_hack/models/message_model.dart';
+import 'package:swim_app_hack/widgets/build_message.dart';
 import 'package:swim_app_hack/widgets/message_input_container.dart';
 import 'package:swim_app_hack/widgets/pool_posts.dart';
 
@@ -9,7 +11,6 @@ class PoolSectionChatScreen extends StatefulWidget {
 
 //TODO WORK HERE, AND FINISH A BASE CHAT SCREEN FOR THE SECTION
 class _PoolSectionChatScreenState extends State<PoolSectionChatScreen> {
- 
   // final bool isRead;
   // PoolSectionChatScreen({this.isRead = b});
 
@@ -41,17 +42,27 @@ class _PoolSectionChatScreenState extends State<PoolSectionChatScreen> {
                 style: TextStyle(letterSpacing: 1.0),
               ),
             ),
-              Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-                children:[
-                  Container(),
-                  MessageInputContainer(),
-                ]
-              ),
+            Expanded(
+              child:
+                  Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+                    // Expanded(child: Container(color: Colors.green,)),
+                Expanded(
+                  child: Container(
+                    child: ListView.builder(
+                      itemCount: section_chats.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        final Message message = section_chats[index];
+                        final bool isMe = message.sender.id == currentUser.id;
+                        return BuildMessage(message: message,isMe: isMe);
+
+                      },
+                    ),
+                  ),
+                ),
+                MessageInputContainer(),
+              ]),
             ),
           ],
-          // ),
         ),
       ),
     );
