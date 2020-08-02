@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:swim_app_hack/widgets/pool_posts.dart';
 
-class PoolSectionChat extends StatefulWidget {
+class PoolSectionChatScreen extends StatefulWidget {
   @override
-  _PoolSectionChatState createState() => _PoolSectionChatState();
+  _PoolSectionChatScreenState createState() => _PoolSectionChatScreenState();
 }
 
 //TODO WORK HERE, AND FINISH A BASE CHAT SCREEN FOR THE SECTION
-class _PoolSectionChatState extends State<PoolSectionChat> {
+class _PoolSectionChatScreenState extends State<PoolSectionChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,16 +26,20 @@ class _PoolSectionChatState extends State<PoolSectionChat> {
       //favorite contacts for the posts sidescrolling
       // and other users below
       body: Column(
-            children: <Widget>[
-              // Text("Posts"),
-              PoolPosts(),
-              // Text("Users"),
-              // Text("Chat"),
-
-            ],
-          // ),
-        ),
-      
+        children: <Widget>[
+          PoolPosts(),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 2.0, vertical: 5.0),
+            color: Colors.green,
+            child: Text(
+              "You have new messages",
+              style: TextStyle(letterSpacing: 1.0),
+            ),
+          ),
+          Container(),
+        ],
+        // ),
+      ),
     );
   }
 }

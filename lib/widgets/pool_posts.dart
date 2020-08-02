@@ -26,13 +26,13 @@ class _PoolPostsState extends State<PoolPosts> {
             ),
           ),
           Container(
-            height: 120,
-            color: Colors.green,
+            height: 150,
+            // color: Colors.green,
             child: ListView.builder(
               //spacing to the left
               padding: EdgeInsets.only(left: 10.0),
               scrollDirection: Axis.horizontal,
-              itemCount: 6,
+              itemCount: 4,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   onTap: () {
@@ -41,7 +41,7 @@ class _PoolPostsState extends State<PoolPosts> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      width: 70,
+                      width: 110,
                       // height: 10,
                       color: Colors.lightBlueAccent,
                     ),
