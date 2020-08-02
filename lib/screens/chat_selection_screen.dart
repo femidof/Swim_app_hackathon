@@ -13,6 +13,43 @@ class ChatSelectionScreen extends StatelessWidget {
           width: 80,
         ),
       ),
+      body: Container(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(5),
+              child: Row(
+                children: [
+                  CircleAvatar(radius: 35),
+                  Text(
+                    "AMY",
+                    style: TextStyle(fontSize: 20, letterSpacing: 0.5),
+                  ),
+                ],
+              ),
+            ),
+            Container(height: 1, color: Colors.grey,),
+            Container(
+              padding: EdgeInsets.all(5),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 35,
+                  ),
+                  Container(
+                    child: Text(
+                      "Group Name",
+                      
+                      style: TextStyle(fontSize: 20, letterSpacing: 0.5),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(height: 1, color: Colors.grey,),
+          ],
+        ),
+      ),
     );
   }
 }
