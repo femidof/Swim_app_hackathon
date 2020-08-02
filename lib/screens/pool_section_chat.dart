@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:swim_app_hack/models/message_model.dart';
-import 'package:swim_app_hack/widgets/build_message.dart';
-import 'package:swim_app_hack/widgets/message_input_container.dart';
+// import 'package:swim_app_hack/widgets/build_message.dart';
+import 'package:swim_app_hack/widgets/chat_history_scroll.dart';
+// import 'package:swim_app_hack/widgets/message_input_container.dart';
+import 'package:swim_app_hack/widgets/message_input_controller_update.dart';
 import 'package:swim_app_hack/widgets/pool_posts.dart';
 import 'package:swim_app_hack/widgets/pool_section_title.dart';
 
@@ -59,25 +61,8 @@ class _PoolSectionChatScreenState extends State<PoolSectionChatScreen> {
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: Container(
-                      // color: Colors.indigo,
-                      // child:
-                      // GestureDetector(
-                      // onTap: () {},
-                      child: ListView.builder(
-                        scrollDirection: Axis.vertical,
-                        itemCount: section_chats.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          final Message message = section_chats[index];
-                          final bool isMe = message.sender.id == currentUser.id;
-                          return BuildMessage(message: message, isMe: isMe);
-                        },
-                        // ),
-                      ),
-                    ),
-                  ),
-                  MessageInputContainer(),
+                  ChatHistoryScroll(),
+                  MessageInputController(),
                 ],
               ),
             ),
