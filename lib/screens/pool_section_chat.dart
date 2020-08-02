@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swim_app_hack/widgets/message_input_container.dart';
 import 'package:swim_app_hack/widgets/pool_posts.dart';
 
 class PoolSectionChatScreen extends StatefulWidget {
@@ -29,7 +30,6 @@ class _PoolSectionChatScreenState extends State<PoolSectionChatScreen> {
       // and other users below
       body: Container(
         color: Color.fromRGBO(229, 246, 246, 1),
-        // color: Colors.w,
         child: Column(
           children: <Widget>[
             PoolPosts(),
@@ -41,7 +41,15 @@ class _PoolSectionChatScreenState extends State<PoolSectionChatScreen> {
                 style: TextStyle(letterSpacing: 1.0),
               ),
             ),
-            Container(),
+              Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+                children:[
+                  Container(),
+                  MessageInputContainer(),
+                ]
+              ),
+            ),
           ],
           // ),
         ),

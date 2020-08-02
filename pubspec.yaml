@@ -20,6 +20,8 @@ dependencies:
   # Firebase Analytics
   firebase_analytics: ^5.0.16
 
+  emoji_picker: ^0.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
