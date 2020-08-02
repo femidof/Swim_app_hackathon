@@ -18,7 +18,11 @@ class FrontPoolPosts extends StatelessWidget {
             ),
             //this one should be a text button
             GestureDetector(
-              onTap: () { print("entering chat room section");},
+              onTap: () {
+                print("entering chat room section");
+                Navigator.of(context).pushNamed("./screens/pool_section_chat_screen.dart");
+                // Navigator.push(context, "./screens/pool_section_chat_screen.dart");
+              },
               child: Container(
                 // color: Colors.blueGrey,
                 height: 40,

@@ -17,7 +17,10 @@ class MyApp extends StatelessWidget {
         // primarySwatch: aquaBlue[50],
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PoolSectionChatScreen(),
+      routes:{
+        "./screens/pool_section_chat_screen.dart": (context) => PoolSectionChatScreen(), 
+      },
+      home: PoolScreen(),
     );
   }
 }
