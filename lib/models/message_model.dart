@@ -45,8 +45,10 @@ List<User> group = [currentUser, olivia, greg];
 List<Message> section_chats = [
   Message(sender: greg, time: '5:30pm', text:"LOREM IPSUM SECTION"),
   Message(sender: olivia, time: '6:30pm', text:"LOREM IPSUM SECTION 2"),
-  Message(sender: currentUser, time: '7:30pm', text:"LOREM IPSUM SECTION 3"),
+  Message(sender: currentUser, time: '7:30pm', text:"LOREM IPSUM asdsadas sdbajhbasjkhd asjda jhb asjadh SECTION 3"),
   Message(sender: sophia, time: '8:30pm', text:"LOREM IPSUM SECTION 4"),
+  Message(sender: sophia, time: '9:30pm', text:"LOREM IPSUM SECTION 5"),
+  Message(sender: sophia, time: '10:30pm', text:"LOREM IPSUM SECTION 6"),
 ];
 
 
