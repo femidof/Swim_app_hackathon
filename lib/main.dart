@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swim_app_hack/colors/aquablue.dart';
 import 'package:swim_app_hack/screens/home_screen.dart';
 import 'package:swim_app_hack/screens/pool_screen.dart';
 import 'package:swim_app_hack/screens/pool_section_chat.dart';
@@ -13,8 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: new ThemeData(
+        // primarySwatch: aquaBlue[50],
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: PoolScreen(),

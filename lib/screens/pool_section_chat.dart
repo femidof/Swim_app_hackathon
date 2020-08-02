@@ -12,13 +12,12 @@ class _PoolSectionChatScreenState extends State<PoolSectionChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green[200],
         centerTitle: true,
-        title: Text(
-          "Swim",
-          style: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.bold,
-          ),
+        title: Image.asset(
+          'assets/images/swim_logo.png',
+          fit: BoxFit.contain,
+          width: 80,
         ),
         // elevation: 5.0,
       ),
