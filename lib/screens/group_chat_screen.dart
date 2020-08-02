@@ -19,15 +19,6 @@ class _GroupChatScreenState extends State<GroupChatScreen> {
           fit: BoxFit.contain,
           width: 80,
         ),
-        actions: [
-          IconButton(
-            icon: Image.asset("assets/images/chat_icon.png"),
-            onPressed: () {
-              Navigator.of(context)
-                  .pushNamed("./screens/chat_selection_screen.dart");
-            },
-          ),
-        ],
       ),
       // body: Expanded(
       body: Container(

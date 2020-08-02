@@ -26,7 +26,7 @@ class _PoolScreenState extends State<PoolScreen> {
             icon: Image.asset("assets/images/chat_icon.png"),
             onPressed: () {
               Navigator.of(context)
-                  .pushNamed("./screens/chat_selection_screen.dart");
+                  .pushNamed("./screens/chat_list_hub.dart");
             },
           ),
         ],
