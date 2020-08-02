@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swim_app_hack/constant.dart';
 
 AppBar customChatBar() {
   return AppBar(
@@ -7,7 +8,7 @@ AppBar customChatBar() {
       IconButton(icon: Icon(Icons.phone_in_talk), onPressed: () {}),
     ],
     elevation: 0.0,
-    backgroundColor: Color(0xff039DA9),
+    backgroundColor: MAIN_COLOR,
     title: Center(
         child: Padding(
       padding: const EdgeInsets.only(

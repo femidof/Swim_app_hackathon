@@ -19,6 +19,8 @@ dependencies:
   firebase_dynamic_links: ^0.5.3
   # Firebase Analytics
   firebase_analytics: ^5.0.16
+  # For Emojis
+  emoji_picker: ^0.1.0
 
 dev_dependencies:
   flutter_test:
