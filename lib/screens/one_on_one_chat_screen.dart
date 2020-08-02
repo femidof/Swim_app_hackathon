@@ -9,55 +9,40 @@ class OneOnOneChatScreen extends StatefulWidget {
 }
 
 class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
-  TextEditingController textFieldController = TextEditingController();
-  bool isWriting = false;
-  ScrollController _listScrollController = ScrollController();
-  bool showEmojiPicker = false;
-  FocusNode textFieldFocus = FocusNode();
+  TextEditingController textFieldController;
+  bool isWriting;
+  bool showEmojiPicker;
+  FocusNode textFieldFocus;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    textFieldController = TextEditingController();
+    isWriting = false;
+    showEmojiPicker = false;
+    textFieldFocus = FocusNode();
   }
 
   showKeyboard() => textFieldFocus.requestFocus();
   hideKeyboard() => textFieldFocus.unfocus();
-  hideEmojiContainer() {
-    setState(() {
-      showEmojiPicker = false;
-    });
-  }
-
-  showEmojiContainer() {
-    setState(() {
-      showEmojiPicker = true;
-    });
-  }
-
-  emojiContainer() {
-    return EmojiPicker(
-      rows: 3,
-      // bgColor: UniversalVariables.separatorColor,
-      columns: 7,
-      // indicatorColor: UniversalVariables.gradientColorStarthmm,
-      onEmojiSelected: (emoji, category) {
-        // null;
-        setState(() {
-          isWriting = true;
-        });
-        textFieldController.text = textFieldController.text + emoji.emoji;
-      },
-      recommendKeywords: ["face", "happy", "party", "sad"],
-      numRecommended: 50,
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customChatBar(),
-      body: messageInputContainer(),
+      body: Column(
+        children: <Widget>[
+          // Flexible(
+          //   child: messageList(),
+          // ),
+          messageInputContainer(),
+          showEmojiPicker
+              ? Container(
+                  child: emojiContainer(),
+                )
+              : Container(),
+        ],
+      ),
     );
   }
 
@@ -77,10 +62,16 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
             child: Container(
               padding: EdgeInsets.all(5),
               decoration: BoxDecoration(
-                // gradient: UniversalVariables.fabGradient,
+                // gradient: MAIN_GRAD,
                 shape: BoxShape.circle,
               ),
-              child: Icon(Icons.attach_file),
+              child: GestureDetector(
+                onTap: () {},
+                child: Icon(
+                  Icons.attach_file,
+                  color: Colors.black54,
+                ),
+              ),
             ),
           ),
           SizedBox(
@@ -95,7 +86,7 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
                   focusNode: textFieldFocus,
                   onTap: () => hideEmojiContainer(),
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black54,
                   ),
                   onChanged: (val) {
                     (val.length > 0 && val.trim() != "")
@@ -103,20 +94,21 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
                         : setWritingTo(false);
                   },
                   decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.ac_unit),
                     hintText: "Type a message",
                     hintStyle: TextStyle(
                       color: MAIN_COLOR,
                     ),
                     border: OutlineInputBorder(
-                        borderRadius: const BorderRadius.all(
-                          const Radius.circular(50.0),
-                        ),
-                        borderSide: BorderSide.none),
+                      borderRadius: const BorderRadius.all(
+                        const Radius.circular(50.0),
+                      ),
+                      borderSide: BorderSide(color: MAIN_COLOR, width: 3),
+                    ),
                     contentPadding:
                         EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     filled: true,
-                    fillColor: MAIN_COLOR,
-                    // suffixIcon:
+                    fillColor: Colors.white,
                   ),
                 ),
                 IconButton(
@@ -129,7 +121,10 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
                       hideEmojiContainer();
                     }
                   },
-                  icon: Icon(Icons.face),
+                  icon: Icon(
+                    Icons.face,
+                    color: Colors.transparent,
+                  ),
                   highlightColor: Colors.transparent,
                   splashColor: Colors.transparent,
                 ),
@@ -140,19 +135,28 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
               ? Container()
               : Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Icon(Icons.record_voice_over),
+                  child: Icon(
+                    Icons.mic,
+                    color: Colors.black54,
+                  ),
                 ),
           isWriting
               ? Container()
               : GestureDetector(
                   onTap: () {},
-                  // pickImage(ImageSource.camera),
-                  child: Icon(Icons.camera_alt),
+                  // pickImage-----ImageSource.camera,
+                  child: Icon(
+                    Icons.camera_alt,
+                    color: Colors.black54,
+                  ),
                 ),
           isWriting
               ? Container(
                   margin: EdgeInsets.only(left: 10),
-                  decoration: BoxDecoration(shape: BoxShape.circle),
+                  decoration: BoxDecoration(
+                    gradient: MAIN_GRAD,
+                    shape: BoxShape.circle,
+                  ),
                   child: IconButton(
                     icon: Icon(
                       Icons.send,
@@ -165,4 +169,36 @@ class OneOnOneChatScreenState extends State<OneOnOneChatScreen> {
       ),
     );
   }
+
+  showEmojiContainer() {
+    setState(() {
+      showEmojiPicker = true;
+    });
+  }
+
+  hideEmojiContainer() {
+    setState(() {
+      showEmojiPicker = false;
+    });
+  }
+
+  emojiContainer() {
+    return EmojiPicker(
+      rows: 3,
+      bgColor: Colors.white,
+      columns: 7,
+      indicatorColor: MAIN_COLOR,
+      onEmojiSelected: (emoji, category) {
+        // null;
+        setState(() {
+          isWriting = true;
+        });
+        textFieldController.text = textFieldController.text + emoji.emoji;
+      },
+      recommendKeywords: ["face", "happy", "party", "sad"],
+      numRecommended: 50,
+    );
+  }
+
+  messageList() {}
 }
