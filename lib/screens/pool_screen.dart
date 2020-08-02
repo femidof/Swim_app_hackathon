@@ -21,7 +21,15 @@ class _PoolScreenState extends State<PoolScreen> {
           fit: BoxFit.contain,
           width: 80,
         ),
-        // elevation: 5.0,
+        actions: [
+          IconButton(
+            icon: Image.asset("assets/images/chat_icon.png"),
+            onPressed: () {
+              Navigator.of(context)
+                  .pushNamed("./screens/chat_selection_screen.dart");
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -39,7 +47,6 @@ class _PoolScreenState extends State<PoolScreen> {
                   children: [
                     CircleAvatar(
                       radius: 25.0,
-                      
                       backgroundColor: Colors.yellow,
                     ),
                   ],
@@ -56,9 +63,13 @@ class _PoolScreenState extends State<PoolScreen> {
           PoolStatsBar(),
           Container(
             height: 2,
-            decoration: BoxDecoration(color: Color.fromRGBO(3, 157, 169, 1),),
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(3, 157, 169, 1),
+            ),
           ),
-          SizedBox(height: 8.0, ),
+          SizedBox(
+            height: 8.0,
+          ),
           Expanded(
             child: Container(
                 color: Color.fromRGBO(229, 246, 246, 1),

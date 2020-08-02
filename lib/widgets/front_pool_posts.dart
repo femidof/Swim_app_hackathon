@@ -20,27 +20,32 @@ class FrontPoolPosts extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 print("entering chat room section");
-                Navigator.of(context).pushNamed("./screens/pool_section_chat_screen.dart");
-                // Navigator.push(context, "./screens/pool_section_chat_screen.dart");
+                Navigator.of(context)
+                    .pushNamed("./screens/pool_section_chat_screen.dart");
               },
               child: Container(
-                // color: Colors.blueGrey,
                 height: 40,
                 width: 100,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Row(
-                  children: [
-                    // Con,
-                    Text(
-                      "CHAT",
-                      style: TextStyle(letterSpacing: 1.0),
-                    ),
-                  ],
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/chat_button.png"),
+                      fit: BoxFit.cover),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
                 ),
+                // child: Row(
+                //   children: [
+                //     // Con,
+
+                //     // Text(
+                //     //   "CHAT",
+                //     //   style: TextStyle(letterSpacing: 1.0),
+                //     // ),
+                //   ],
               ),
             ),
+            // ),
           ],
         ),
       ),
