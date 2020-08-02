@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swim_app_hack/colors/aquablue.dart';
-import 'package:swim_app_hack/screens/home_screen.dart';
+import 'file:///C:/Users/marod%20bits/Documents/Android%20Dev/swim_app_hack/trash/home_screen.dart';
 import 'package:swim_app_hack/screens/pool_screen.dart';
 import 'package:swim_app_hack/screens/pool_section_chat.dart';
 
