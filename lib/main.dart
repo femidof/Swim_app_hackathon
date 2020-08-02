@@ -21,9 +21,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes:{
+        "./screens/one_to_one_chat_screen.dart":(context) => OneToOneChatScreen(),
         "./screens/group_chat_screen.dart":(context) => GroupChatScreen(),
         "./screens/chat_selection_screen.dart": (context) =>ChatSelectionScreen(),
         "./screens/pool_section_chat_screen.dart": (context) => PoolSectionChatScreen(), 
+        // one more route needed!!!
       },
       home: OneToOneChatScreen(),
     );
