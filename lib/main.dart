@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swim_app_hack/colors/aquablue.dart';
 import 'file:///C:/Users/marod%20bits/Documents/Android%20Dev/swim_app_hack/trash/home_screen.dart';
 import 'package:swim_app_hack/screens/pool_screen.dart';
 import 'package:swim_app_hack/screens/pool_section_chat.dart';
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         // primarySwatch: aquaBlue[50],
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PoolScreen(),
+      home: PoolSectionChatScreen(),
     );
   }
 }
