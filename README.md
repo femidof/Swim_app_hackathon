@@ -2,7 +2,7 @@
 
 A new Flutter project.
 Mockup video:
-https://drive.google.com/file/d/1Lw9jES21i0kk5D6rBDfrUgdIQsZmGeoC/view?usp=sharing
+https://drive.google.com/file/d/1xVbMfprTHFcUNpw9E5jXlYJkz1OAP9a_/view?usp=sharing
 
 ## Getting Started
 
